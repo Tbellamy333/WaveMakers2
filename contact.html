@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveMakers</title>
+    <!-- Link to the static CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to the favicon (ICO file) -->
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Snowflakes Animation -->
+    <div class="snowflakes">
+        <!-- JavaScript will populate snowflakes here -->
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to <span aria-label="WaveMakers">WaveMakers</span></h1>
+        <p>Learning made fun and interactive!</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main role="main">
+        
+    </main>
+
+    
+
+    <!-- Add JavaScript for snowflakes -->
+    <script>
+        for (let i = 0; i < 50; i++) {
+            let snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄'; // Snowflake symbol
+            snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            snowflake.style.animationDuration = `${Math.random() * 4 + 6}s`; // Random speed
+            document.querySelector('.snowflakes').appendChild(snowflake);
+        }
+    </script>
+
+</body>
+</html>
+
+
+Contact - WaveMakers
+<h1>Contact Us</h1>
+<p>We'd love to hear from you! Whether you have a question, feedback, or need support, feel free to reach out.</p>
+
+<!-- New Section: Contact Form -->
+<section>
+    <h2>Contact Form</h2>
+    <!-- Change action to point to '/contact' instead of '/submit' -->
+    <form action="{{ url_for('contact') }}" method="post">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<section>
+    <h2>Email Us</h2>
+    <p>If you need assistance or have any inquiries, send us an email at <a href="mailto:support@wavemakers.com">support@wavemakers.com</a>.</p>
+</section>
+
+<section>
+    <h2>Follow Us</h2>
+    <p>Stay connected and follow us on our social media channels:</p>
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+    </ul>
+</section>
+   
+<!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 WaveMakers. All rights reserved.</p>
+    </footer>

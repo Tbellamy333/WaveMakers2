@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveMakers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Snowflakes Animation -->
+    <div class="snowflakes">
+        <!-- JavaScript will populate snowflakes here -->
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to <span aria-label="WaveMakers">WaveMakers</span></h1>
+        <p>Learning made fun and interactive!</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('features') }}">Features</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main role="main">
+    <div class="index-page">
+    <h1 class="hero-title">Welcome to WaveMakers</h1>
+    <p class="hero-subtitle">Learning made fun and interactive!</p>
+
+    <!-- New Section: Intro Section -->
+    <section class="intro">
+        <p>Join WaveMakers today and begin your journey towards interactive learning!</p>
+        <a href="{{ url_for('about') }}" class="btn">Learn More About Us</a>
+    </section>
+
+    <!-- AI Tutors Section -->
+    <section class="feature-section">
+        <img src="images/placeholders/ai-tutors.png" alt="AI Tutors" class="feature-image">
+        <h2 class="feature-title">AI Tutors</h2>
+        <p class="feature-description">Explore the power of AI tutors, offering personalized lessons to enhance your learning experience.</p>
+    </section>
+
+    <!-- Leaderboards Section -->
+    <section class="feature-section">
+        <img src="images/placeholders/leaderboards.png" alt="Leaderboards" class="feature-image">
+        <h2 class="feature-title">Leaderboards</h2>
+        <p class="feature-description">Track your progress and challenge yourself by competing with peers on real-time leaderboards.</p>
+    </section>
+
+    <!-- Titles Section -->
+    <section class="feature-section">
+        <img src="images/placeholders/titles.png" alt="Titles" class="feature-image">
+        <h2 class="feature-title">Unlock Titles</h2>
+        <p class="feature-description">Earn unique titles and rewards as you accomplish learning milestones throughout your journey.</p>
+    </section>
+
+    <!-- Note-Taking Tools Section -->
+    <section class="feature-section">
+        <img src="images/placeholders/note-taking-tools.png" alt="Note-Taking Tools" class="feature-image">
+        <h2 class="feature-title">Note-Taking Tools</h2>
+        <p class="feature-description">Streamline your studies with intuitive note-taking tools that adapt to your learning style.</p>
+    </section>
+</div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 WaveMakers. All rights reserved.</p>
+    </footer>
+
+    <!-- Add JavaScript for snowflakes -->
+    <script>
+        for (let i = 0; i < 50; i++) {
+            let snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄'; // Snowflake symbol
+            snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            snowflake.style.animationDuration = `${Math.random() * 4 + 6}s`; // Random speed
+            document.querySelector('.snowflakes').appendChild(snowflake);
+        }
+    </script>
+
+</body>
+</html>

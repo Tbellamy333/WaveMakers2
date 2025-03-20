@@ -1,0 +1,101 @@
+About - WaveMakers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveMakers</title>
+    <!-- Link to the static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Link to the favicon (ICO file) -->
+    <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <!-- Snowflakes Animation -->
+    <div class="snowflakes">
+        <!-- JavaScript will populate snowflakes here -->
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to <span aria-label="WaveMakers">WaveMakers</span></h1>
+        <p>Learning made fun and interactive!</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main role="main">
+        
+    </main>
+
+    
+
+    <!-- Add JavaScript for snowflakes -->
+    <script>
+        for (let i = 0; i < 50; i++) {
+            let snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄'; // Snowflake symbol
+            snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            snowflake.style.animationDuration = `${Math.random() * 4 + 6}s`; // Random speed
+            document.querySelector('.snowflakes').appendChild(snowflake);
+        }
+    </script>
+
+</body>
+</html>
+
+<h1>About WaveMakers</h1>
+<link rel="stylesheet" href="css/styles.css">
+<p>WaveMakers is your interactive hub for learning, designed to make education engaging, fun, and accessible to everyone.</p>
+
+<!-- New Section: Our Team -->
+<section>
+    <h2>Our Team</h2>
+    <p>WaveMakers is powered by a passionate team of developers, educators, and designers, all committed to providing the best learning experience.</p>
+
+    <!-- Role Definitions -->
+    <div class="team-member">
+        <h3>DeAndre Brown - Application Developer</h3>
+        <p>Develop the core application, UI/UX design, implement the gamified system, and Study Buddy (AI tutor).</p>
+    </div>
+    <div class="team-member">
+        <h3>Dawa Tsering - Cloud Infrastructure Architect</h3>
+        <p>Manage AWS infrastructure, ensuring scalability, security, and efficient resource allocation.</p>
+    </div>
+    <div class="team-member">
+        <h3>Ethelbert Dawuta Michael & Marcus - Business Analysts</h3>
+        <p>Analyze user needs and ensure the platform meets educational goals. Gather feedback from students, parents, and teachers.</p>
+    </div>
+    <div class="team-member">
+        <h3>Tamon Bellamy - Project Manager</h3>
+        <p>Oversee the entire project, manage timelines, and ensure all tasks are completed on schedule. Coordinate with all team members to ensure project alignment.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Our Mission</h2>
+    <p>At WaveMakers, we believe in empowering individuals with tools that foster creativity, collaboration, and growth.</p>
+</section>
+
+<section>
+    <h2>Why Choose WaveMakers?</h2>
+    <ul>
+        <li>Innovative AI-powered learning tools</li>
+        <li>Gamified features for enhanced motivation</li>
+        <li>Customizable resources to fit your unique learning style</li>
+    </ul>
+</section>
+<!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 WaveMakers. All rights reserved.</p>
+    </footer>

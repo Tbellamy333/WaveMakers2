@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveMakers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Snowflakes Animation -->
+    <div class="snowflakes">
+        <!-- JavaScript will populate snowflakes here -->
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to <span aria-label="WaveMakers">WaveMakers</span></h1>
+        <p>Learning made fun and interactive!</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+Features - WaveMakers
+
+<h1>WaveMakers Features</h1>
+
+<section>
+    <h2>AI Tutors</h2>
+    <p>Experience personalized guidance with cutting-edge AI tutors, designed to help you achieve your learning goals with tailored lessons and feedback.</p>
+</section>
+
+<section>
+    <h2>Real-Time Leaderboards</h2>
+    <p>Engage with friends and peers while tracking your progress on real-time leaderboards, showcasing your learning journey.</p>
+</section>
+
+<section>
+    <h2>Gamified Learning</h2>
+    <p>Stay motivated by unlocking titles, rewards, and achievements as you progress through various learning challenges.</p>
+</section>
+
+<!-- New Section: Adaptive Learning -->
+<section>
+    <h2>Adaptive Learning</h2>
+    <p>Our AI tutors adjust to your learning pace, ensuring that you're always challenged without feeling overwhelmed.</p>
+</section>
+
+
+<section>
+    <h2>Note-Taking Tools</h2>
+    <p>Streamline your studies with intuitive note-taking tools that are customized to fit your unique learning needs and style.</p>
+</section>
+
+<!-- Add JavaScript for snowflakes -->
+    <script>
+        for (let i = 0; i < 50; i++) {
+            let snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄'; // Snowflake symbol
+            snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            snowflake.style.animationDuration = `${Math.random() * 4 + 6}s`; // Random speed
+            document.querySelector('.snowflakes').appendChild(snowflake);
+        }
+    </script>
